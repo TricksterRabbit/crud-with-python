@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "crud-with-python"
+version = "0.1.0"
+description = ""
+authors = ["TricksterRabbit <rennanoliveirabaldi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.2.2"
+flask-sqlalchemy = "^3.0.2"
+psycopg2 = "^2.9.5"
+python-dotenv = "^0.21.0"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^1.7.0"
+flake8 = "^5.0.4"
+
+[tool.poetry.scripts]
+create-tables = "scripts.database:create_tables"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
